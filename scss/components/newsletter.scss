@@ -1,0 +1,74 @@
+.newsletter {
+  @include space(padding, left, $small);
+  background-size: cover;
+  height: 300px;
+}
+
+.newsletter-form {
+  input[type=email] {
+    width: 400px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    @include space(padding, left, 40px);
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: 'proxima_novalight';
+    line-height: $line-height-heading;
+    outline: none;
+  }
+
+  display: flex;
+  border-radius: 50px;
+  width: 250px;
+  border:1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: $text-white;
+}
+
+input:focus {
+  color: $text-white;
+}
+
+input:-moz-placeholder {
+  color: $text-white;
+}
+
+
+input::-moz-placeholder {
+  color: $text-white;
+}
+
+input:-ms-input-placeholder {
+  color: $text-white;
+}
+
+@include responsive($tablet) {
+  .newsletter-form {
+    width: 300px;
+  }
+}
+
+@include responsive($desktop) {
+  .newsletter {
+    height: 500px;
+  }
+
+  .newsletter div {
+    width: 100%;
+  }
+
+  .newsletter__heading{
+    margin-bottom: $small;
+  }
+
+  .newsletter-form {
+    width: 400px;
+    z-index: 1;
+    input[type=email] {
+      font-size: $font-paragraph-baseD;
+    }
+  }
+}

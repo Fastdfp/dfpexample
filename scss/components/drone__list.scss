@@ -1,0 +1,81 @@
+.drone__list__item {
+  font-family: 'proxima_nova_regular';
+  color: $paragraph-ligthgrey;
+  position: relative;
+  counter-increment: my-awesome-counter;
+  line-height: 24px;
+  font-size: calc(#{$font-paragraph-smallD} - 4px);
+}
+
+.drone__list li::before {
+  content: counter(my-awesome-counter);
+  -ms-content: counter(my-awesome-counter);
+  color: $point-number-color;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  left: calc(-1 * 25px - 10px);
+  line-height: 25px;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  background: transparent;
+  border: 2px solid $point-border-grey;
+  border-radius: 50%;
+  text-align: center;
+  @include space(margin, bottom, 10px);
+}
+
+@include responsive($tablet) {
+
+  .drone__list li::before {
+    content: counter(my-awesome-counter);
+    font-size: 1rem;
+    left: calc(-1 * 40px - 10px);
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    @include space(margin, bottom, 10px);
+  }
+
+  .drone__list__item {
+    font-size: calc(#{$font-paragraph-smallD} - 2px);
+  }
+}
+
+@include responsive($desktop) {
+
+  .drone__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .drone__list li::before {
+    font-size: 1.5rem;
+    --size: 60px; // does not supported in IE 
+    left: -55px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    top: 0;
+  }
+
+  .drone__list__item {
+    font-size: $font-paragraph-smallD;
+    margin-bottom: 40px;
+  }
+
+}
+
+@include responsive($largeDesktops) {
+
+  .drone__list li::before {
+    left: -75px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    top: 0;
+  }
+}

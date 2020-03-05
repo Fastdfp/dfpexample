@@ -1,0 +1,86 @@
+.feature-icon-air {
+  background: url('../img/sprites/icon-sprite.png') -120px -1px;
+  width: 101px;
+  height: 100px;
+  display: inline-block;
+}
+
+.feature-icon-best {
+  background: url('../img/sprites/icon-sprite.png') -10px -1px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.feature-icon-speed {
+  background: url('../img/sprites/icon-sprite.png') -231px -0px;
+  width: 100px;
+  height: 101px;
+  display: inline-block;
+}
+
+.feature-icon-range {
+  background: url('../img/sprites/icon-sprite.png') -341px -1px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+
+.features__item {
+  width: 290px;
+  border: 3px dotted $gradient-pink;
+  border-radius: 150px;
+  @include space(padding, left, $xs);
+  @include space(padding, right, $xs);
+}
+
+@include responsive($tablet) {
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@include responsive($desktop) {
+
+  .features {
+    margin: 0 40px;
+  }
+
+  .features__item {
+    width: 240px;
+    height: 320px;
+    border: none;
+    border-radius: 50px;
+    @include space(padding, all, 0);
+    @include space(margin, all, 15px);
+  }
+
+  .feature__paragraph {
+    word-break: break-all;
+    text-justify: auto;
+    width: 240px;
+  }
+
+  .feature__img {
+    @include space(margin, all, 0);
+    @include space(padding, all, 0);
+  }
+
+  // .features__item:hover {
+  //   box-shadow: 5px 5px 50px 5px $scroll-txt;
+  //   cursor: pointer;
+  // }
+
+}
+
+@include responsive($largeDesktops) {
+  .features {
+    justify-content: space-around;
+    @include space(margin, all, 0);
+  }
+}

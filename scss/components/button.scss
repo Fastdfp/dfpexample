@@ -1,0 +1,144 @@
+.btn {
+  border: 1px solid $text-white;
+  border-radius: 50px;
+  padding: 0 10px;
+  width: 150px;
+  font-family: 'proxima_novalight';
+  line-height: $line-height-heading;
+  color: $text-white;
+}
+
+.btn:hover {
+  border: 4px solid $text-white;
+  cursor: pointer;
+  background-color: $header-text-orange;
+}
+
+.btn--white {
+  background-color: $text-white;
+  color: $btn-text-color;
+  @include space(margin, bottom, $xs);
+}
+
+.btn--transperant {
+  background-color: transparent;
+  color: $text-white;
+}
+
+.btn--transperant {
+  span {
+    @include space(margin, right, 20px);
+  }
+}
+
+.btn--price {
+  background-image: linear-gradient(to right, #264699, #2f4d9d, #3855a1, #415ca5, #4964a9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#264699', endColorstr='#4965A9', GradientType=1);
+  /* IE6-9 */
+}
+
+.btn--send {
+  color: $btn-text-color !important;
+  @include space(margin, left, -50px);
+  background-color: $text-white;
+  z-index: 5;
+  height: 40px;
+  width: 90px;
+}
+
+.scroll-btn {
+  display: none;
+}
+
+.feature__btn {
+  @include space(padding, bottom, 100px);
+}
+
+.gallery__image__btn {
+  display: none;
+}
+
+@include responsive($mobile) {
+  .gallery__image__btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $text-white;
+    border-radius: 50%;
+    @include space(padding, all, 20px);
+    background-color: $transparent-white;
+    cursor: pointer;
+    box-shadow: 1px 1px 40px 1px rgba(0, 0, 0, 0.23);
+  }
+}
+
+.gallery__image__btn:hover {
+  border: 4px solid $header-text-orange;
+  color: $header-text-orange;
+}
+
+
+
+@include responsive($tablet) {
+  .btn--send {
+    height: 40px;
+    width: 100px;
+  }
+}
+
+@include responsive(1024px) {
+  .btn {
+    border: 1px solid $text-white;
+    border-radius: 50px;
+    padding: 5px 15px;
+    width: 160px;
+    font-family: 'proxima_novalight';
+    line-height: $line-height-heading;
+    color: $text-white;
+  }
+
+  .btn--white {
+    background-color: $text-white;
+    color: $btn-text-color;
+    @include space(margin, bottom, 0);
+  }
+  .btn--send {
+    width: 130px;
+  }
+}
+
+@include responsive($desktop) {
+  .btn--send {
+    height: 51px;
+  }
+
+  .scroll-btn {
+    display: block;
+
+    a {
+      text-transform: none;
+    }
+
+    p {
+      color: $scroll-txt;
+    }
+
+    span {
+      font-size: 40px;
+      color: $scroll-pink-icon;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include responsive($largeDesktops) {
+  .btn {
+    font-size: $font-paragraph-baseD;
+    width: 200px;
+  }
+  .btn--send {
+    width: 150px;
+  }
+}

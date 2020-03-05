@@ -1,0 +1,46 @@
+.o-list {
+  //height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.o-list__item {
+  list-style: none;
+  @include space(margin, bottom, 20px);
+  @include space(margin, right, $small);
+}
+
+@include responsive($tablet) {
+
+  .o-list__item {
+    width: 350px;
+    @include space(margin, left, auto);
+    @include space(margin, right, auto);
+  }
+}
+
+@include responsive($desktop) {
+  .o-list {
+    width: 760px;
+    height: calc(280px + #{$basic-marginM});
+    @include space(margin, all, 0);
+  }
+
+  .o-list__item {
+    width: 385px;
+    @include space(margin, right, 80px);
+    @include space(padding, left, 5px);
+
+  }
+}
+
+@include responsive($largeDesktops) {
+  .o-list {
+    width: 860px;
+  }
+
+  .o-list__item {
+    @include space(margin, right, 120px);
+    @include space(padding, left, 5px);
+  }
+}

@@ -1,0 +1,11 @@
+.o-flex-wrapper--row{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.o-flex-wrapper--column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

@@ -1,0 +1,5 @@
+@include responsive($largeDesktops) {
+  .o-center-bottom {
+    bottom: 5px;
+  }
+}

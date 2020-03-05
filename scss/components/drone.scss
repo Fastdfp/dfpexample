@@ -1,0 +1,85 @@
+.drone {
+  @include space(margin, all, auto);
+  border: 3px solid $gradient-pink;
+}
+
+.drone__text {
+  font-size: $font-paragraph-baseD;
+}
+
+.drone__img {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 70%;
+    float: right;
+  }
+
+  /////display:none;
+  //  not sure how looks better :)
+}
+
+@include responsive($tablet) {
+  .drone__info {
+    @include space(margin, all, auto);
+  }
+
+}
+
+@include responsive($desktop) {
+  .drone {
+    flex-direction: row;
+    @include space(margin, top, 80px);
+    @include space(margin, bottom, 65px);
+    flex-wrap: wrap;
+    border: none;
+  }
+
+  .drone__info {
+    @include space(padding, left, $small);
+    width: auto;
+  }
+
+  .drone__img {
+    display: block;
+  }
+
+  .drone__text {
+    @include space(margin, left, 5px);
+    width: 730px;
+    text-align: left;
+  }
+
+  .drone__heading {
+    text-align: left;
+    @include space(margin, bottom, 5px);
+  }
+
+}
+
+@include responsive(1470px) {
+  .drone__img {
+    width: 720px;
+    @include space(padding, all, 0);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include responsive($largeDesktops) {
+  .drone__info {
+    @include space(padding, left, $xxlarge);
+  }
+
+  .drone__text {
+    @include space(margin, left, -25px);
+    @include space(margin, bottom, 30px);
+  }
+
+  .drone__paragraph {
+    line-height: $line-height-heading;
+  }
+}

@@ -1,0 +1,72 @@
+header {
+  background-image: url('../img/header.jpg');
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__paragraph {
+  width: auto;
+}
+
+@include responsive($mobile) {
+  .header__paragraph {
+    width: 360px;
+    color: $header-text-orange;
+  }
+}
+
+.header__btn-wrapper {
+  align-items: center;
+  margin: $xs 0;
+}
+
+.header__paragraph {
+  color: $text-white;
+}
+
+@include responsive($desktop) {
+  header {
+    @include space(padding, right, $large);
+    @include space(padding, left, $large);
+    height: 1080px;
+  }
+
+  .header__paragraph {
+    width: 520px;
+    color: $header-text-orange;
+  }
+
+  .header__heading {
+    @include space(margin, top, $large);
+    @include space(margin, bottom, 20px);
+  }
+
+  .header__btn-wrapper {
+    width: 350px;
+    flex-direction: row;
+    margin: $xs auto;
+  }
+}
+
+@include responsive($largeDesktops) {
+  header {
+    @include space(padding, right, $xxlarge);
+    @include space(padding, left, 300px);
+  }
+
+  .header__paragraph {
+    @include space(margin, bottom, -15px);
+    width: 560px;
+    color: $header-text-orange;
+  }
+
+  .header__heading {
+    @include space(margin, top, $xlarge);
+  }
+
+  .header__btn-wrapper {
+    @include space(padding, top, 40px);
+    width: 420px;
+  }
+}

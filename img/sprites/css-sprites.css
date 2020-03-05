@@ -1,0 +1,49 @@
+.css-sprite-best-icon
+{
+background:url('css-sprite-combined.png') -10px -1px;
+width:100px;height:100px;
+display:inline-block;
+}
+
+.css-sprite-from-airIcon
+{
+background:url('css-sprite-combined.png') -120px -1px;
+width:101px;height:100px;
+display:inline-block;
+}
+
+.css-sprite-speed-icon
+{
+background:url('css-sprite-combined.png') -231px -0px;
+width:100px;height:101px;
+display:inline-block;
+}
+
+.css-sprite-long-range
+{
+background:url('css-sprite-combined.png') -341px -1px;
+width:100px;height:100px;
+display:inline-block;
+}
+
+////////////////////////////////////////
+.css-sprite-drone
+{
+background:url('css-sprite-combined.2.png') -30px -125px;
+width:735px;height:518px;
+display:inline-block;
+}
+
+.css-sprite-seapic
+{
+background:url('css-sprite-combined.2.png') -795px -2px;
+width:959px;height:641px;
+display:inline-block;
+}
+
+.css-sprite-townpic
+{
+background:url('css-sprite-combined.2.png') -1784px -0px;
+width:961px;height:643px;
+display:inline-block;
+}

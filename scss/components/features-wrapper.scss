@@ -1,0 +1,13 @@
+.features-wrapper {
+  @include space(padding, top, $medium);
+  align-items: center;
+}
+
+@include responsive($desktop) {
+  .features-wrapper {
+    background-color: $whitegray-bgcolor;
+    @include space(padding, left, $xxlarge);
+    @include space(padding, right, $xxlarge);
+    @include space(padding, top, 105px);
+  }
+}

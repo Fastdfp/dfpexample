@@ -1,0 +1,89 @@
+.gmnoprint, .header__nav, .btn, .newsletter, title, .gallery__image__btn {
+  display: none;
+}
+
+@-moz-document url-prefix() {
+  @media print {
+    @page {
+      size: 1600px;
+    }
+    body, html {
+      width: 1600px;
+    }
+  }
+}
+
+.map {
+  width: 1000px;
+  height: 410px;
+  overflow: visible;
+  position: absolute;
+  background-color: rgb(229, 227, 223);
+  margin: 0 auto;
+}
+
+.map, .drone {
+  page-break-inside: avoid;
+  page-break-after: always;
+}
+
+.drone {
+  width: 17cm;
+  height: 13cm;
+  border: none;
+  page-break-inside: avoid;
+}
+
+.drone__list li::before {
+  display: none;
+}
+
+.printable {
+  -ms-print-color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
+.features, .gallery {
+  display: table;
+}
+
+/* img {
+  page-break-before: auto;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  display: block;
+} */
+
+.features__item {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: none;
+}
+
+.gallery__item {
+  display: inline-block;
+  height: 400px;
+  width: 600px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.gallery__item:nth-child(1) {
+  margin-bottom: 65px;
+}
+
+.gallery__item:nth-child(4) {
+  margin-top: -180px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .gallery__item:nth-child(4) {
+    margin-bottom: 180px;
+  }
+}
+
+footer {
+  margin-top: -100px;
+}

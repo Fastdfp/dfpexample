@@ -1,0 +1,16 @@
+.map {
+  height: 250px;
+}
+
+@include responsive($tablet){
+  .map {
+    height: 403px;
+  }
+}
+
+@include responsive($desktop){
+  .map {
+    height: 603px;
+  }
+}
+

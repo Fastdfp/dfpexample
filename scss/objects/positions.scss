@@ -1,0 +1,38 @@
+//text-positions
+.o-text--center {
+  text-align: center;
+}
+
+.o-text-left {
+  text-align: left;
+}
+
+//element positions
+.o-element-centered {
+  margin: 0 auto;
+}
+
+.o-relative {
+  position: relative;
+}
+
+.o-absolute {
+  position: absolute;
+}
+
+.o-center-bottom {
+  bottom: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-gap: 0;
+}
+
+.o-center-vertically {
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.o-full-width{
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+.logo {
+  width: 180px;
+  @include space(margin, left, auto);
+  @include space(margin, right, auto);
+  @include space(margin, bottom, 2%);
+  border-bottom: 1px double white;
+}
+
+@include responsive($desktop) {
+  .logo {
+    border-bottom: none;
+    @include space(margin, all, 0);
+  }
+
+  .header__banner {
+    @include space(padding, top, $small);
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+}

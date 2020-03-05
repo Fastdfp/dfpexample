@@ -1,0 +1,19 @@
+a {
+  font-family: proxima_nova_regular;
+  font-size: calc(#{$font-paragraph-baseD} - 3px);
+  text-decoration: none;
+  text-transform: capitalize;
+  color: $text-white;
+}
+
+@include responsive($tablet) {
+  a {
+    font-size: calc(#{$font-paragraph-baseD} - 3px);
+  }
+}
+
+@include responsive($desktop) {
+  a {
+    font-size: $font-paragraph-baseD;
+  }
+}

@@ -1,0 +1,18 @@
+p {
+  font-family: 'proxima_nova_regular';
+  font-size: calc(#{$font-paragraph-baseD} - 3px);
+  color: $paragraph-grey;
+  line-height: $line-height-paragraph;
+}
+
+@include responsive($tablet){
+  p {
+    font-size: calc(#{$font-paragraph-baseD} - 3px);
+  }
+}
+
+@include responsive($desktop){
+  p {
+    font-size: $font-paragraph-baseD;
+  }
+}

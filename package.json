@@ -1,0 +1,28 @@
+{
+  "name": "fe-excercise-dronezone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/sofiqM/fe-excercise-dronezone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sofiqM/fe-excercise-dronezone/issues"
+  },
+  "homepage": "https://gitlab.com/sofiqM/fe-excercise-dronezone#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.2"
+  },
+  "dependencies": {
+    "node-sass": "*"
+  }
+}

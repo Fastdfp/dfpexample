@@ -1,0 +1,25 @@
+h1,h2 {
+  font-family: 'proxima_nova_bold';
+  font-size: calc(#{$font-heading-largeD} - 15px);
+  color: $text-white;
+  line-height: $line-height-heading;
+}
+
+@include responsive($desktop) {
+  h1,h2 {
+    font-size: $font-heading-largeD;
+  }
+}
+
+@include responsive($tablet) {
+  h3 {
+    font-size: $font-features-sizeD;
+  }
+}
+
+@include responsive($desktop) {
+  h3 {
+    margin: 0;
+    font-size: $font-features-sizeD;
+  }
+}

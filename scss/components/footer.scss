@@ -1,0 +1,25 @@
+footer {
+  height: $basic-marginM;
+}
+.footer__paragraph{
+  color: $paragraph-ligthgrey;
+  line-height: $line-height-heading;
+}
+
+@include responsive($tablet) { 
+  footer {
+    height: $large;
+  }
+}
+
+@include responsive($desktop) {
+  footer {
+    height: 200px;
+  }
+} 
+
+@include responsive($largeDesktops) {
+  footer {
+    height: 400px;
+  }
+}

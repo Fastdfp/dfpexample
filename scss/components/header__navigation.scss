@@ -1,0 +1,74 @@
+.header__nav a {
+  display: none;
+}
+
+.header__nav a.icon {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  font-size: 30px;
+}
+
+.header__nav a.icon span {
+  color: $gradient-purple;
+}
+
+.header__nav a:last-child {
+  color: $text-white;
+  @include space(padding, all, 5px);
+}
+
+.header__nav.responsive {
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__nav.responsive a {
+  float: none;
+  display: block;
+  text-align: center;
+  @include space(padding, all, 10px);
+  width: 200px;
+  margin: 0 auto;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  border-bottom: 1px dotted $btn-text-color;
+}
+
+@include responsive($desktop) {
+  .header__nav a {
+    display: inline;
+    @include space(margin, left, 10px);
+  }
+
+  .header__nav.responsive a {
+    border: none;
+    float: left;
+    width: auto;
+  }
+
+  .header__nav.responsive {
+    background-color: transparent;
+  }
+
+  .header__nav a:last-child {
+    border: 1px solid $text-white;
+    border-radius: 50px;
+    color: $text-white;
+    padding: 10px 20px;
+  }
+
+  .icon span {
+    display: none;
+  }
+
+}
+
+@include responsive($largeDesktops) {
+  .header__nav a {
+    @include space(padding, left, 30px);
+  }
+
+}
